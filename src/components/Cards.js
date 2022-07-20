@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './Cards.css';
 import {gsap, TimelineLite, Power3 } from 'gsap';
+
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 

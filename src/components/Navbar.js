@@ -60,7 +60,6 @@ function Navbar() {
       }
     }
   }
-
   return (
     <>
       <nav className='navbar'>
@@ -74,6 +73,7 @@ function Navbar() {
                 HOME
               </Link>
             </li>
+            
             <li className='nav-item'>
               <Link
                 to='/'
@@ -101,9 +101,6 @@ function Navbar() {
                 SHOP
               </Link>
             </li>
-
-           
-
             <li>
               <Link
                 to='/'
@@ -113,6 +110,8 @@ function Navbar() {
                 Sign Up
               </Link>
             </li>
+
+            
           </ul>
           {button && <Link to='/'> <Button buttonStyle='btn--outline'>SIGN UP</Button></Link>}
         </div>
