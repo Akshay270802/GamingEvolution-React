@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import './Navbar.css';
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
-  const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
   const showButton = () => {
@@ -72,6 +70,7 @@ function Navbar() {
                 Home
               </Link>
             </li>
+            
             <li className='nav-item'>
               <Link
                 to='/'
@@ -100,21 +99,6 @@ function Navbar() {
                 SHOP
               </Link>
             </li>
-
-            <li>
-              
-            </li>
-
-            <li>
-              <Link
-                to='/'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                LOG IN
-              </Link>
-            </li>
-
             <li>
               <Link
                 to='/'
@@ -124,6 +108,8 @@ function Navbar() {
                 Sign Up
               </Link>
             </li>
+
+            
           </ul>
           {button && <Link to='/sign-up'> <Button buttonStyle='btn--outline'>SIGN UP</Button></Link>}
         </div>
