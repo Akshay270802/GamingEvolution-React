@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import './Cards.css';
-import CardItem from './CardItem';
 import {gsap, TimelineLite, Power3 } from 'gsap';
-import img001 from './images1/img1.png';
 
 
 
