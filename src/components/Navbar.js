@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './Navbar.css';
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
+  const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
   const showButton = () => {
@@ -63,14 +65,15 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          
+          <div className='menu-icon' onClick={handleClick}>
+            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+          </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
+                HOME
               </Link>
             </li>
-            
             <li className='nav-item'>
               <Link
                 to='/'
@@ -89,7 +92,6 @@ function Navbar() {
                 COMPARE DEVICES
               </Link>
             </li>
-
             <li className='nav-item'>
               <Link
                 to='/'
@@ -99,6 +101,9 @@ function Navbar() {
                 SHOP
               </Link>
             </li>
+
+           
+
             <li>
               <Link
                 to='/'
@@ -108,10 +113,8 @@ function Navbar() {
                 Sign Up
               </Link>
             </li>
-
-            
           </ul>
-          {button && <Link to='/sign-up'> <Button buttonStyle='btn--outline'>SIGN UP</Button></Link>}
+          {button && <Link to='/'> <Button buttonStyle='btn--outline'>SIGN UP</Button></Link>}
         </div>
       </nav>
     </>

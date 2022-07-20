@@ -32,16 +32,17 @@ function HeroSection() {
         </Button>
         </motion.div>
       </div>
+      <div className='hero-image'></div>
     </div>
 
     <div className='hero-midsection-container'>
       <div className='hero-midsection-row'>
       <div className='hero-midsection-column1'><img src={user1} alt="this is user image" />
-      <h2>Sign Up</h2><p></p></div>
-      <div className='hero-midsection-column2'><img src={sword1} alt="this is sword image" />
-      <h2>compete</h2></div>
-      <div className='hero-midsection-column3'><img src={trophy1} alt="this is trophy image" />
-      <h2>Win&Earn</h2></div>
+      <h2>Sign Up</h2><p>Create your account </p></div>
+      <div className='hero-midsection-column1'><img src={sword1} alt="this is sword image" />
+      <h2>Compete</h2><p>Join Tournaments to compete with others</p></div>
+      <div className='hero-midsection-column1'><img src={trophy1} alt="this is trophy image" />
+      <h2>Win&Earn</h2><p>Win and earn in the form of crypto</p></div>
     </div>
     </div>
    
